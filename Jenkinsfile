@@ -3,11 +3,13 @@ pipeline {
     stages {
         stage('appname') {
             steps {
-	    def appname=" test "
-	    def appdir=appname.replace(" " , "_" )
-	    println "${appdir}"
-	    println "${appname}"
-            }
+	    	script {
+			def appname = "test"
+		    	def appdir = appname.replace(" " , "_" )
+	    		println "${appdir}"
+	    		println "${appname}"
+			}
+            	}	
         }
     }
 }
